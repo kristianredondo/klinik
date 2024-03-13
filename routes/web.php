@@ -20,3 +20,6 @@ Route::get('', function () {
 Route::get('testing', function () {
     return view('profil');
 });
+
+Route::get('/profil', [UserController::class, 'index']);
+Route::post('/profil/store', [UserController::class, 'simpan'])->name('simpan');
